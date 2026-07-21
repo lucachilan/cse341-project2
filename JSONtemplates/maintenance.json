@@ -1,0 +1,8 @@
+{
+    "maintenance": [{
+        "equipmentId":"",
+        "serviceType":"",
+        "cost":"",
+        "technicianName":""
+    }]
+}

@@ -1,0 +1,11 @@
+{
+    "inventory":[{
+        "itemCode":"",
+        "itemName":"",
+        "purchaseDate":"",
+        "purchasePrice":"",
+        "currentStatus":"",
+        "category":"",
+        "lastServiceDate":""
+    }]
+}

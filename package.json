@@ -1,0 +1,31 @@
+{
+  "name": "cse341-project2",
+  "version": "1.0.0",
+  "description": "My Project",
+  "bugs": {
+    "url": "https://github.com/lucachilan/cse341-project2/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lucachilan/cse341-project2.git"
+  },
+  "license": "ISC",
+  "author": "Luca Chilan",
+  "type": "commonjs",
+  "main": "server.js",
+  "scripts": {
+    "dev": "nodemon server.js",
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "body-parser": "^2.3.0",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "express-validator": "^7.3.2",
+    "mongodb": "^7.5.0",
+    "node": "^26.5.0",
+    "nodemon": "^3.1.14",
+    "swagger-autogen": "^2.23.7",
+    "swagger-ui-express": "^5.0.1"
+  }
+}
