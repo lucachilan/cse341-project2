@@ -5,8 +5,8 @@ const doc = {
         title: 'Inventory and Maintenance API',
         description: 'Inventory and Maintenance Api'
     },
-    host: 'localhost:8080',
-    schemes: ['http','https']
+    host: 'https://cse341-project2-7ss5.onrender.com',
+    schemes: ['https']
 };
 
 const outputFile = './swagger.json';
