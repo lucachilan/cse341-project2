@@ -5,7 +5,7 @@ const doc = {
         title: 'Inventory and Maintenance API',
         description: 'Inventory and Maintenance Api'
     },
-    host: 'https://cse341-project2-7ss5.onrender.com',
+    host: 'cse341-project2-7ss5.onrender.com',
     schemes: ['https']
 };
 
