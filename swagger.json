@@ -5,7 +5,7 @@
     "description": "Inventory and Maintenance Api",
     "version": "1.0.0"
   },
-  "host": "https://cse341-project2-7ss5.onrender.com",
+  "host": "cse341-project2-7ss5.onrender.com",
   "basePath": "/",
   "schemes": [
     "https"
@@ -79,8 +79,8 @@
           "204": {
             "description": "No Content"
           },
-          "412": {
-            "description": "Precondition Failed"
+          "400": {
+            "description": "Bad Request"
           },
           "500": {
             "description": "Internal Server Error"
@@ -177,8 +177,8 @@
           "204": {
             "description": "No Content"
           },
-          "412": {
-            "description": "Precondition Failed"
+          "400": {
+            "description": "Bad Request"
           },
           "500": {
             "description": "Internal Server Error"
@@ -232,8 +232,8 @@
           "204": {
             "description": "No Content"
           },
-          "412": {
-            "description": "Precondition Failed"
+          "400": {
+            "description": "Bad Request"
           },
           "500": {
             "description": "Internal Server Error"
@@ -321,8 +321,8 @@
           "204": {
             "description": "No Content"
           },
-          "412": {
-            "description": "Precondition Failed"
+          "400": {
+            "description": "Bad Request"
           },
           "500": {
             "description": "Internal Server Error"
