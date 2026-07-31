@@ -5,8 +5,8 @@ const doc = {
         title: 'Inventory and Maintenance API',
         description: 'Inventory and Maintenance Api'
     },
-    host: 'localhost:3000',
-    schemes: ['https', 'http'],
+    host: 'cse341-project2-7ss5.onrender.com',
+    schemes: ['https'],
     tags: [
         { name: 'Authentication', description: 'GitHub OAuth login and logout endpoints' },
         { name: 'Inventory', description: 'Manage inventory items. GET routes are public. POST, PUT, DELETE require login.' },

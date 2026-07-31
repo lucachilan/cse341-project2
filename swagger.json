@@ -5,7 +5,7 @@
     "description": "Inventory and Maintenance Api",
     "version": "1.0.0"
   },
-  "host": "localhost:3000",
+  "host": "cse341-project2-7ss5.onrender.com",
   "basePath": "/",
   "tags": [
     {
@@ -22,8 +22,7 @@
     }
   ],
   "schemes": [
-    "https",
-    "http"
+    "https"
   ],
   "securityDefinitions": {
     "githubOAuth": {
