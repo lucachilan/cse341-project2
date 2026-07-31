@@ -5,23 +5,57 @@
     "description": "Inventory and Maintenance Api",
     "version": "1.0.0"
   },
-  "host": "cse341-project2-7ss5.onrender.com",
+  "host": "localhost:3000",
   "basePath": "/",
-  "schemes": [
-    "https"
+  "tags": [
+    {
+      "name": "Authentication",
+      "description": "GitHub OAuth login and logout endpoints"
+    },
+    {
+      "name": "Inventory",
+      "description": "Manage inventory items. GET routes are public. POST, PUT, DELETE require login."
+    },
+    {
+      "name": "Maintenance",
+      "description": "Manage maintenance records. GET routes are public. POST, PUT, DELETE require login."
+    }
   ],
+  "schemes": [
+    "https",
+    "http"
+  ],
+  "securityDefinitions": {
+    "githubOAuth": {
+      "type": "oauth2",
+      "authorizationUrl": "https://github.com/login/oauth/authorize",
+      "flow": "implicit",
+      "scopes": {
+        "read:user": "Read GitHub user profile"
+      }
+    }
+  },
+  "consumes": [],
+  "produces": [],
   "paths": {
-    "/": {
+    "/login": {
       "get": {
         "tags": [
-          "is working"
+          "Authentication"
         ],
         "description": "",
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
+        "parameters": [],
+        "responses": {}
+      }
+    },
+    "/logout": {
+      "get": {
+        "tags": [
+          "Authentication"
+        ],
+        "description": "",
+        "parameters": [],
+        "responses": {}
       }
     },
     "/inventory/": {
@@ -31,6 +65,7 @@
         "produces": [
           "application/json"
         ],
+        "parameters": [],
         "responses": {
           "200": {
             "description": "OK"
@@ -45,7 +80,7 @@
         "description": "",
         "parameters": [
           {
-            "name": "body",
+            "name": "obj",
             "in": "body",
             "schema": {
               "type": "object",
@@ -68,7 +103,7 @@
                 "category": {
                   "example": "any"
                 },
-                "lastServiceDate": {
+                "lastServiceDate\r": {
                   "example": "any"
                 }
               }
@@ -81,6 +116,9 @@
           },
           "400": {
             "description": "Bad Request"
+          },
+          "401": {
+            "description": "Unauthorized"
           },
           "500": {
             "description": "Internal Server Error"
@@ -112,26 +150,6 @@
           }
         }
       },
-      "delete": {
-        "tags": [],
-        "description": "",
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "type": "string"
-          }
-        ],
-        "responses": {
-          "204": {
-            "description": "No Content"
-          },
-          "500": {
-            "description": "Internal Server Error"
-          }
-        }
-      },
       "put": {
         "tags": [],
         "description": "",
@@ -143,7 +161,7 @@
             "type": "string"
           },
           {
-            "name": "body",
+            "name": "obj",
             "in": "body",
             "schema": {
               "type": "object",
@@ -166,7 +184,7 @@
                 "category": {
                   "example": "any"
                 },
-                "lastServiceDate": {
+                "lastServiceDate\r": {
                   "example": "any"
                 }
               }
@@ -179,6 +197,32 @@
           },
           "400": {
             "description": "Bad Request"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      },
+      "delete": {
+        "tags": [],
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content"
+          },
+          "401": {
+            "description": "Unauthorized"
           },
           "500": {
             "description": "Internal Server Error"
@@ -193,6 +237,7 @@
         "produces": [
           "application/json"
         ],
+        "parameters": [],
         "responses": {
           "200": {
             "description": "OK"
@@ -207,7 +252,7 @@
         "description": "",
         "parameters": [
           {
-            "name": "body",
+            "name": "obj",
             "in": "body",
             "schema": {
               "type": "object",
@@ -221,7 +266,7 @@
                 "cost": {
                   "example": "any"
                 },
-                "technicianName": {
+                "technicianName\r": {
                   "example": "any"
                 }
               }
@@ -234,6 +279,9 @@
           },
           "400": {
             "description": "Bad Request"
+          },
+          "401": {
+            "description": "Unauthorized"
           },
           "500": {
             "description": "Internal Server Error"
@@ -280,6 +328,9 @@
           "204": {
             "description": "No Content"
           },
+          "401": {
+            "description": "Unauthorized"
+          },
           "500": {
             "description": "Internal Server Error"
           }
@@ -296,7 +347,7 @@
             "type": "string"
           },
           {
-            "name": "body",
+            "name": "obj",
             "in": "body",
             "schema": {
               "type": "object",
@@ -310,7 +361,7 @@
                 "cost": {
                   "example": "any"
                 },
-                "technicianName": {
+                "technicianName\r": {
                   "example": "any"
                 }
               }
@@ -324,11 +375,15 @@
           "400": {
             "description": "Bad Request"
           },
+          "401": {
+            "description": "Unauthorized"
+          },
           "500": {
             "description": "Internal Server Error"
           }
         }
       }
     }
-  }
+  },
+  "definitions": {}
 }
